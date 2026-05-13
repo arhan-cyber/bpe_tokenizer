@@ -1,5 +1,5 @@
-import pretokenization_example
-from pretokenization_example import find_chunk_boundaries
+import parallellandopt.pretokenization_example as pretokenization_example
+from parallellandopt.pretokenization_example import find_chunk_boundaries
 from multiprocessing import Pool
 from collections import defaultdict
 
