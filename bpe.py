@@ -58,5 +58,6 @@ def byte_bpe(pretokens, num_iterations=5):
 
     return freq
 
-final_freq = byte_bpe(pretokens, num_iterations=6)
-print (vocabulary)
+if __name__ == "__main__":
+    final_freq = byte_bpe(pretokens, num_iterations=6)
+    print (vocabulary)
