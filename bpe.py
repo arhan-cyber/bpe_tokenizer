@@ -1,6 +1,6 @@
 from collections import defaultdict
 vocabulary = {bytes([i]): i for i in range(256)}
-vocabulary["<|endoftext|>"]=len(vocabulary)+1
+vocabulary[b"<|endoftext|>"] = len(vocabulary)
 corpus = """low low low low low
 lower lower widest widest widest
 newest newest newest newest newest newest"""
