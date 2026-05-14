@@ -1,5 +1,5 @@
-import parallellandopt.pretokenization_example as pretokenization_example
-from parallellandopt.pretokenization_example import find_chunk_boundaries
+import pretokenization_example as pretokenization_example
+from pretokenization_example import find_chunk_boundaries
 from multiprocessing import Pool
 from collections import defaultdict
 
@@ -8,6 +8,10 @@ from collections import defaultdict
 
 
 #=======this is the single threaded code======
+
+
+#===freq dictionary of the occurency of each WORD
+#==build the frequency dictionary for which has keys as the BYTEWISE sequence of the pretokens (space-delimited words) and values as the count of how many times that sequence appears in the corpus
 def build_local_freq(pretokens):
     freq = {}
 
@@ -21,6 +25,7 @@ def build_local_freq(pretokens):
     return freq
 
 
+#===reads the small chunk, and passes the bytestream for the seperated words to build local freq
 def process_chunk(args):
     filename, start, end = args
 
